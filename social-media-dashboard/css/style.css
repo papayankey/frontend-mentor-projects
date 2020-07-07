@@ -20,7 +20,7 @@
   --bg-color: hsl(0, 0%, 100%);
   --top-bg-pattern: hsl(224, 100%, 98%);
   --card-color: hsl(227, 47%, 96%);
-  --card-color-dark: hsl(227, 47%, 93%);
+  --card-color-dark: hsl(227, 47%, 90%);
   --text-accent: hsl(228, 12%, 44%);
   --text: hsl(230, 17%, 14%);
 }
@@ -30,7 +30,7 @@
   --bg-color: hsl(230, 17%, 14%);;
   --top-bg-pattern: hsl(232, 19%, 15%);
   --card-color: hsl(228, 28%, 20%);
-  --card-color-dark: hsl(228, 28%, 25%);
+  --card-color-dark: hsl(228, 28%, 28%);
   --text-accent: hsl(228, 34%, 66%);
   --text: hsl(0, 0%, 100%);
 }
@@ -191,6 +191,10 @@ a {
     justify-content: space-between;
     margin-bottom: 20px;
   }
+}
+
+.dashboard__followers {
+  margin-top: 2em;
 }
 
 .dashboard__followers__card {
