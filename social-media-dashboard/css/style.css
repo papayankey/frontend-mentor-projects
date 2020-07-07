@@ -117,7 +117,7 @@ a {
 /* dashbaord overview */
 .dashboard__overview__header {
   font-size: 1.2rem;
-  color: var(--text-accent);
+  color: var(--text);
   margin: 20px 0;
 }
 
