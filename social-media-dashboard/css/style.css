@@ -16,19 +16,23 @@
   --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
   --youtube: hsl(348, 97%, 39%);
 
-  /* light mode */
-  --light-bg-color: hsl(0, 0%, 100%);
-  --light-top-bg-pattern: hsl(224, 100%, 98%);
-  --light-card-color: hsl(227, 47%, 96%);
-  --light-blue-text: hsl(228, 12%, 44%);
-  --light-dark-text: hsl(230, 17%, 14%);
+  /* light theme */
+  --bg-color: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(224, 100%, 98%);
+  --card-color: hsl(227, 47%, 96%);
+  --card-color-dark: hsl(227, 47%, 93%);
+  --text-accent: hsl(228, 12%, 44%);
+  --text: hsl(230, 17%, 14%);
+}
 
-  /* dark mode */
-  --dark-bg-color: hsl(230, 17%, 14%);
-  --dark-top-bg-pattern: hsl(232, 19%, 15%);
-  --dark-card-color: hsl(228, 28%, 20%);
-  --dark-blue-text: hsl(228, 34%, 66%);
-  --dark-white-text: hsl(0, 0%, 100%);
+/* dark theme */
+[data-theme="dark"] {
+  --bg-color: hsl(230, 17%, 14%);;
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-color: hsl(228, 28%, 20%);
+  --card-color-dark: hsl(228, 28%, 25%);
+  --text-accent: hsl(228, 34%, 66%);
+  --text: hsl(0, 0%, 100%);
 }
 
 *,
@@ -41,15 +45,15 @@ body {
   font-size: 16px;
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: var(--light-bg-color);
-  color: var(--light-dark-text);
+  background-color: var(--bg-color);
+  color: var(--text);
 }
 
 .hr-md {
   height: 2px;
   width: 100%;
   margin: 20px 0 15px;
-  background-color: var(--light-blue-text);
+  background-color: var(--text-accent);
 }
 
 @media (min-width: 768px) {
@@ -75,7 +79,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--light-dark-text);
+  color: var(--text);
 }
 /* end of base styles */
 
@@ -97,17 +101,23 @@ a {
 
 .dashboard__overview__card,
 .dashboard__followers__card {
-  background-color: var(--light-card-color);
+  background-color: var(--card-color);
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.dashboard__overview__card:hover,
+.dashboard__followers__card:hover,
+.ribbon {
+  background-color: var(--card-color-dark);
+}
+
 /* dashbaord overview */
 .dashboard__overview__header {
   font-size: 1.2rem;
-  color: var(--light-blue-text);
+  color: var(--text-accent);
   margin: 20px 0;
 }
 
@@ -125,7 +135,7 @@ a {
 }
 
 .dashboard__overview__card div:first-child p:first-child {
-  color: var(--light-blue-text);
+  color: var(--text-accent);
 }
 
 .dashboard__overview__card div:last-child p:first-child {
@@ -172,7 +182,7 @@ a {
 }
 
 .dashboard__header p {
-  color: var(--light-blue-text);
+  color: var(--text-accent);
 }
 
 @media (min-width: 768px) {
@@ -213,7 +223,7 @@ a {
 
 .dashboard__followers__card p:nth-of-type(2) {
   text-transform: uppercase;
-  color: var(--light-blue-text);
+  color: var(--text-accent);
   margin-bottom: 20px;
   letter-spacing: 2.2px;
   font-size: 0.7rem;
@@ -241,7 +251,7 @@ a {
   height: 25px;
 }
 
-/* Hide default HTML checkbox */
+/* hide default checkbox */
 .switch input {
   opacity: 0;
   width: 0;
@@ -256,7 +266,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--light-blue-text);
+  background-color: var(--text-accent);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -268,7 +278,7 @@ a {
   width: 22px;
   left: 2px;
   bottom: 2px;
-  background-color: var(--light-bg-color);
+  background-color: var(--bg-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -287,7 +297,7 @@ input:checked + .slider:before {
   transform: translateX(25px);
 }
 
-/* Rounded sliders */
+/* rounded slider */
 .slider.round {
   border-radius: 32px;
 }
