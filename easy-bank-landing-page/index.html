@@ -49,21 +49,22 @@
             </g>
           </svg>
         </div>
-        <div class="navbar__icons container">
-          <img src="images/icon-hamburger.svg" alt="hamburger" />
-          <img src="images/icon-close.svg" alt="close icon" hidden="true" />
+        <div class="container">
+          <img
+            src="images/icon-hamburger.svg"
+            alt="hamburger"
+            data-menu="close"
+          />
         </div>
-        <div class="backdrop"></div>
-        <div class="navbar__navs__container">
-          <div class="container">
-            <ul class="navbar__navs">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
+        <div class="backdrop is-not-visible"></div>
+        <div class="navbar__navs__container container is-not-visible">
+          <ul class="navbar__navs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
         </div>
         <button type="submit">Request Invite</button>
       </nav>
@@ -254,5 +255,6 @@
       <button type="submit">Request Invite</button>
       <p class="footer__copyright">&copy; Easybank. All Right Reserved</p>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
