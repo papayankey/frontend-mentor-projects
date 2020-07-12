@@ -137,20 +137,22 @@ button:-moz-focusring,
   top: 60px;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    var(--dark-blue) 25%,
-    var(--white) 75%
-  );
+  background: linear-gradient(to bottom, var(--dark-blue), var(--white));
   opacity: 0.5;
+}
+
+.is-not-visible {
   visibility: hidden;
+}
+
+.navbar__menu {
+  cursor: pointer;
 }
 
 .navbar__navs__container {
   position: absolute;
   top: 60px;
   width: 100%;
-  visibility: hidden;
 }
 
 .navbar__navs {
@@ -163,7 +165,6 @@ button:-moz-focusring,
   border-radius: 0.25em;
   background-color: var(--white);
   z-index: 50px;
-  visibility: hidden;
 }
 
 .navbar__navs li + li {
