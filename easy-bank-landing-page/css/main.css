@@ -139,10 +139,6 @@ button:-moz-focusring,
   }
 }
 
-/* .gap-fix {
-  height: 60px;
-} */
-
 .backdrop {
   position: absolute;
   top: 0;
@@ -150,7 +146,9 @@ button:-moz-focusring,
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, var(--dark-blue), var(--white));
+  overflow: hidden;
   opacity: 0.8;
+  z-index: 10;
 }
 
 .is-not-visible {
@@ -180,6 +178,7 @@ button:-moz-focusring,
   margin-left: 10%;
   background-color: var(--white);
   padding: var(--spacing);
+  border-radius: 0.25em;
   text-align: center;
   z-index: 50;
 }

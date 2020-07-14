@@ -15,10 +15,12 @@ function init() {
     if (!menuIsOpen) {
       setAttributes('images/icon-close.svg', 'icon close');
       [...allHidden].forEach(elem => elem.classList.remove('is-not-visible'));
+      document.body.style.overflow = 'hidden';
       menuIsOpen = true;
     } else {
       setAttributes('images/icon-hamburger.svg', 'icon hamburger');
       [...allHidden].forEach(elem => elem.classList.add('is-not-visible'));
+      document.body.style.overflow = '';
       menuIsOpen = false;
     }
   }
