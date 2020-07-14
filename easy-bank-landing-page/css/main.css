@@ -55,6 +55,7 @@ h1,
 h2,
 h3 {
   color: var(--dark-blue);
+  font-weight: 400;
 }
 
 a {
@@ -386,6 +387,10 @@ button:-moz-focusring,
 .articles__article {
   background-color: var(--white);
   margin-bottom: var(--spacing);
+}
+
+.articles__header {
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
