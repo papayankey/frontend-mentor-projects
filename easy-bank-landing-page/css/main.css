@@ -157,9 +157,12 @@ button:-moz-focusring,
   display: none;
 }
 
+/* navbar */
 .navbar {
-  background-color: paleturquoise;
+  background-color: var(--white);
   height: 60px;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar .container {
@@ -178,6 +181,7 @@ button:-moz-focusring,
   background-color: var(--white);
   padding: var(--spacing);
   text-align: center;
+  z-index: 50;
 }
 
 @media only screen and (min-width: 768px) {
@@ -237,30 +241,101 @@ button:-moz-focusring,
 
 /* hero */
 .hero {
+  position: relative;
   text-align: center;
   background-color: var(--very-light-gray);
 }
 
 .hero__content {
-  padding-top: calc(var(--spacing) * 2);
-  padding-bottom: calc(var(--spacing) * 2);
+  position: relative;
+  top: -110px;
+}
+
+.hero__content button {
+  margin-top: var(--spacing);
 }
 
 @media only screen and (min-width: 768px) {
   .hero__content {
+    position: static;
     text-align: left;
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
     width: 350px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .hero__content {
+    padding-top: calc(var(--spacing) * 3);
+    padding-bottom: calc(var(--spacing) * 3);
+    width: 500px;
+  }
+}
+
+.hero__bg {
+  position: relative;
+  top: -110px;
+  width: 100%;
+}
+
+.hero__bg__back img {
+  width: 100%;
+}
+
+.hero__bg__front {
+  position: absolute;
+  top: 0;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.hero__bg__front img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__bg__back img:first-child {
+    display: none;
+  }
+
+  .hero__bg__back img:last-child {
+    display: block;
+  }
+
+  .hero__bg {
+    position: absolute;
+    right: -250px;
+    top: -120px;
+    width: 658px;
+  }
+
+  .hero__bg__front {
+    top: 70px;
+    right: 150px;
+  }
+
+  .hero__bg__front img {
     width: 400px;
   }
 }
 
-.hero__content button {
-  margin-top: calc(var(--spacing) - 1em);
+@media only screen and (min-width: 1200px) {
+  .hero__bg {
+    position: absolute;
+    right: -250px;
+    top: -190px;
+    width: 915px;
+  }
+
+  .hero__bg__front {
+    top: 140px;
+    right: 120px;
+  }
+
+  .hero__bg__front img {
+    width: 540px;
+  }
 }
 
 /* services */
