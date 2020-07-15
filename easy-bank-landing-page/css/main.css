@@ -448,6 +448,11 @@ button:-moz-focusring,
   padding: var(--spacing);
 }
 
+.articles__article__content h3:hover {
+  color: var(--lime-green);
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
   .articles__article__container {
     display: grid;
