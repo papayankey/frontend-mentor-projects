@@ -98,6 +98,26 @@ button,
   padding: calc(var(--spacing) / 2) calc(var(--spacing));
   border-radius: 2em;
   color: var(--white);
+  cursor: pointer;
+  position: relative;
+}
+
+button:after {
+  visibility: hidden;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: inherit;
+  opacity: 0.5;
+}
+
+button:hover:after {
+  visibility: visible;
+  opacity: 0.5;
 }
 
 button::-moz-focus-inner,
@@ -115,16 +135,9 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
 [hidden] {
   display: none;
 }
-
-/* end style resets */
 
 .container {
   width: 100%;
@@ -218,6 +231,37 @@ button:-moz-focusring,
 
   .navbar__navs li:not(:first-of-type) {
     margin-left: 1.5em;
+  }
+
+  .navbar__navs li {
+    position: relative;
+  }
+
+  .navbar__navs li a {
+    color: var(--grayish-blue);
+  }
+
+  .navbar__navs li:after {
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+      to right,
+      var(--lime-green),
+      var(--bright-cyan)
+    );
+  }
+
+  .navbar__navs li:hover:after {
+    visibility: visible;
+  }
+
+  .navbar__navs li:hover a {
+    color: var(--dark-blue);
   }
 
   .navbar__hamburger {
@@ -448,8 +492,16 @@ button:-moz-focusring,
   color: var(--white);
 }
 
+.footer a:hover {
+  color: var(--lime-green);
+}
+
+.footer__social a + a {
+  margin-left: calc(var(--spacing) / 4);
+  cursor: pointer;
+}
+
 .footer__nav li + li,
-.footer__social a + a,
 .footer__social {
   margin-top: calc(var(--spacing) / 2);
 }
@@ -467,10 +519,6 @@ button:-moz-focusring,
 
   .footer__nav {
     text-align: left;
-  }
-
-  .footer a:hover {
-    color: var(--lime-green);
   }
 
   .footer__social {
