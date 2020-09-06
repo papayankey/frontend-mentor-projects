@@ -445,7 +445,7 @@ button:-moz-focusring,
 }
 
 .articles__article__content {
-  padding: var(--spacing);
+  padding: 20px;
 }
 
 .articles__article__content h3:hover {
