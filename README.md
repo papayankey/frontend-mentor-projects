@@ -9,5 +9,5 @@ Below are live demos of each project:
 
 Challenges                    | Stacks           | Demo
 :---                          |      :---:       | :---:
-Social Media Dashboard        |  html, css, js   | [Live](https://iambenbright.github.io/frontend-mentor-projects/social-media-dashboard)
-Easy Bank Landing Page     |  html, css, js   | [Live](https://iambenbright.github.io/frontend-mentor-projects/easy-bank-landing-page)
+Social Media Dashboard        |  html, css, js   | [Live](https://papayankey.github.io/frontend-mentor-projects/social-media-dashboard)
+Easy Bank Landing Page     |  html, css, js   | [Live](https://papayankey.github.io/frontend-mentor-projects/easy-bank-landing-page)
